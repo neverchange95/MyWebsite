@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="Author" content="Michael Küchenmeister"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"/>
+        <title>Michael Küchenmeister</title>
+    </head>
+    <body class="body_main">
+        <h1 class="h1_main">Hey, ich bin Michi<br>Informatik Student an der<br>Technischen Hochschule Ingolstadt</h1>
+        <nav>
+            <div class="name_logo">
+                <h4>Michael Küchenmeister</h4>
+            </div>
+            <ul>
+                <li><a href="#">Start</a></li>
+                <li><a href="#">Über mich</a></li>
+                <li><a href="#">Projekte</a></li>
+            </ul>
+        </nav>
+        <!-- Text rotation -->
+        <div id="tag"></div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="rotate_text.js"></script>
+        <script>
+            $(document).ready(function() {
+                var elements = [
+                    {label : 'C'},
+                    {label : 'HTML'},
+                    {label : 'CSS'},
+                    {label : 'Java'},
+                    {label : 'PHP'},
+                    {label : 'Python'}
+                ];
+                var settings = {
+                    entries : entries,
+                    width : 640,
+                    height : 480,
+                    radius : '65%',
+                    radiusMin : 75,
+                    bgDraw : true,
+                    bgColor : '#000',
+                    opacityOver : 1.00,
+                    opacityOut : 0.05,
+                    opacitySpeed : 6,
+                    fov : 800,
+                    speed : 2,
+                    fontFamily: 'Corier, Arial, sans-serif',
+                    fontSize: '30',
+                    fontColor: '#f00',
+                    fontWeight: 'bold',
+                    fontStyle: 'normal',
+                    fontSretch: 'normal',
+                    fontToUpparcase:true
+                };
+                $('#tag').svg3DTagCloud(settings);
+            });
+        </script>
+    </body>
+</html>

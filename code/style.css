@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.h1_welcome {
+    font-family:"Montserrat", sans-serif;
+    font-size: 2.5vw; /* vw = automatic resize with a another resolution */
+    color: white;
+    margin-left: 50%;
+    margin-top: 15%;
+}
+
+.h1_main {
+    font-family:"Montserrat", sans-serif;
+    font-size: 2.5vw;
+    color: white;
+    margin-left: 5%;
+    margin-top: 18%;
+}
+
+nav {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin-top: -27%;
+    align-items: center;
+    min-height: 6vh;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+div#tag {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+
+.name_logo {
+    width: 14%;
+    margin-left: 5%;
+    font-size: 0.9vw;
+}
+
+ul {
+    margin-left: 40%;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 0.8vw;
+}
+
+.body_welcome {
+    background: url(/images/pexels-markus-spiske-193350.jpg);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-color: #172118;
+}
+
+.body_main {
+    background: #172118;
+}
+
+.welcome_button {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2vw;
+    background-color: #C4BCA0;
+    color: black;
+    margin-top: 4%;
+    margin-left: 68%;
+    border-radius: 100px;
+    width: 12vw;
+    height: 3vw;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.welcome_button:focus {
+    color: green;
+    border: 2px solid #89ac71;
+    box-shadow: 0px 0px 0px 1px #89ac71;
+    animation: animation-shadow .3s forwards;
+}
+
+@keyframes animation-shadow {
+    100% {
+        box-shadow: 0px 0px 50px 20px #89ac71;
+    }
+}
