@@ -13,7 +13,8 @@
     <body class="body_projects">
         <nav id="projects_nav">
             <div class="name_logo">
-                <h4>Michael Küchenmeister</h4>
+                <h4 id="welcome_h1">Michael Küchenmeister</h4>
+                <script type="text/javascript" src="fadingText.js"></script>
             </div>
             <ul id="action-bar">
                 <li id="action-bar"><a href="main.html" id="action-bar">Start</a></li>
@@ -21,24 +22,24 @@
                 <li id="action-bar"><a href="projects.html" id="action-bar">Projekte</a></li>
             </ul>
         </nav>
-        <h1 class="h1_projects">Meine Projekte</h1>
+        <h1 class="h1_projects" id="welcome_h1">Meine Projekte</h1>
         <div class="process-wrapper">
             <div id="progress-bar-container">
                 <ul>
                     <li class="step step01 active">
-                        <div class="step-inner">HOME WORK</div>
+                        <div class="step-inner">Snake</div>
                     </li>
                     <li class="step step02">
-                        <div class="step-inner">RESPONSIVE PART</div>
+                        <div class="step-inner">MP3-Player</div>
                     </li>
                     <li class="step step03">
-                        <div class="step-inner">CREATIVE CREATIONS</div>
+                        <div class="step-inner">Rootkit</div>
                     </li>
                     <li class="step step04">
-                        <div class="step-inner">TESTIMONIALS PART</div>
+                        <div class="step-inner">ToDo-App</div>
                     </li>
                     <li class="step step05">
-                        <div class="step-inner">OUR LOCATIONS</div>
+                        <div class="step-inner">Visuelle Suche</div>
                     </li>
                 </ul>
                 <div id="line">
@@ -46,7 +47,7 @@
                 </div>
             </div>
             <div id="progress-content-section">
-                <div class="section-content discovery active">
+                <div class="section-content snake active">
                     <img src="/images/todolist-app_icon.png" width="90" height="90">
                     <h2>To-Do Applikation für Android Smartphones</h2>
                     <p>
@@ -58,8 +59,8 @@
                     </p>
                 </div>
 
-                <div class="section-content strategy">
-                    <h2>GALLERY SECTION</h2>
+                <div class="section-content mp3-player">
+                    <h2>MP3-Player in Java</h2>
                     <p>
                         dslkaäfölkdsölakfäöldskaäfölkdsöälakfäöldskaäfölkdsäölakf
                         ölksaädfölkdsölakfäöldskaäfölkdsäöalfkädöslakfäöldskäaflk
@@ -67,8 +68,8 @@
                     </p>
                 </div>
 
-                <div class="section-content creative">
-                    <h2>CREATIVE CREATIONS</h2>
+                <div class="section-content rootkit">
+                    <h2>Rootkit & Keylogger</h2>
                     <p>
                         dslkaäfölkdsölakfäöldskaäfölkdsöälakfäöldskaäfölkdsäölakf
                         ölksaädfölkdsölakfäöldskaäfölkdsäöalfkädöslakfäöldskäaflk
@@ -76,8 +77,8 @@
                     </p>
                 </div>
 
-                <div class="section-content production">
-                    <h2>´TESTMONIALS NOW</h2>
+                <div class="section-content todo">
+                    <h2>To-Dp Applikation für Android Smartphones</h2>
                     <p>
                         dslkaäfölkdsölakfäöldskaäfölkdsöälakfäöldskaäfölkdsäölakf
                         ölksaädfölkdsölakfäöldskaäfölkdsäöalfkädöslakfäöldskäaflk
@@ -85,8 +86,8 @@
                     </p>
                 </div>
 
-                <div class="section-content analysis">
-                    <h2>OUR LOCATIONS</h2>
+                <div class="section-content visuelleSuche">
+                    <h2>Visuelle Tiefen und Breitensuche</h2>
                     <p>
                         dslkaäfölkdsölakfäöldskaäfölkdsöälakfäöldskaäfölkdsäölakf
                         ölksaädfölkdsölakfäöldskaäfölkdsäöalfkädöslakfäöldskäaflk
@@ -105,27 +106,27 @@
 
             $(".step01").click( function() {
                 $("#line-process").css("width", "5%");
-                $(".discovery").addClass("active").siblings().removeClass("active");
+                $(".snake").addClass("active").siblings().removeClass("active");
             });
 
             $(".step02").click( function() {
-                $("#line-process").css("width", "25%");
-                $(".strategy").addClass("active").siblings().removeClass("active");
+                $("#line-process").css("width", "28%");
+                $(".mp3-player").addClass("active").siblings().removeClass("active");
             });
 
             $(".step03").click( function() {
                 $("#line-process").css("width", "50%");
-                $(".creative").addClass("active").siblings().removeClass("active");
+                $(".rootkit").addClass("active").siblings().removeClass("active");
             });
 
             $(".step04").click( function() {
-                $("#line-process").css("width", "75%");
-                $(".production").addClass("active").siblings().removeClass("active");
+                $("#line-process").css("width", "73%");
+                $(".todo").addClass("active").siblings().removeClass("active");
             });
 
             $(".step05").click( function() {
                 $("#line-process").css("width", "95%");
-                $(".analysis").addClass("active").siblings().removeClass("active");
+                $(".visuelleSuche").addClass("active").siblings().removeClass("active");
             });
         </script>
     </body>

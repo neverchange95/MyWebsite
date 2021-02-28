@@ -9,12 +9,24 @@
         <link rel="stylesheet" href="style.css"/>
         <title>Willkommen</title>
     </head>
-    <body class="body_welcome">
-        <main>
+    <body data-barba="wrapper" class="body_welcome">
+        <main data-barba="container" data-barba-namespace="home">
             <h1 class="h1_welcome">Hey,<br>willkommen auf meiner Website</h1>
             <button class="welcome_button" id="welcome_page_button"type="button" onclick="location.href='main.html';">Klicke hier</button>
         </main>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
-        <script src="welcome_animation.js"></script>
+        <script src="https://unpkg.com/@barba/core"></script>
+        <script src="https://unpkg.com/@barba/css"></script>
+        <!--Fade in animation-->
+        <script>
+            barba.use(barbaCss);
+            barba.init({
+                transitions: [
+                    {
+                        name:'home',
+                        once() { },
+                    },
+                ]
+            });
+        </script>
     </body>
 </html>
