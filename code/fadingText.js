@@ -1,12 +1,17 @@
-const text = document.getElementById('welcome_h1');
-const text2 = document.getElementById('überschrift');
+/**
+ * Fading Text for my name in the nav-bar
+ */
 
+const text = document.getElementById('textAni');
 const strText = text.textContent;
 const splitText = strText.split("");
 text.textContent = "";
 
 for(let i=0; i < splitText.length; i++) {
-    text.innerHTML += "<span>" + splitText[i] + "</span>";
+    text.innerHTML += "<span id=\"green\">" + splitText[i] + "</span>";
+    if(splitText[i] === ' ') {
+        text.innerHTML += " ";
+    }
 }
 
 let char = 0;

@@ -11,10 +11,10 @@
         <title>Michael Küchenmeister</title>
     </head>
     <body class="body_main">
-        <h1 class="h1_main">Hey, ich bin Michi<br>Informatik Student an der<br>Technischen Hochschule Ingolstadt</h1>
+        <h1 class="h1_main" id="main_text">Hey, ich bin Michi<br>Informatik Student an der<br>Technischen Hochschule Ingolstadt</h1>
         <nav id="main_nav">
             <div class="name_logo">
-                <h4 id="welcome_h1">Michael Küchenmeister</h4>
+                <h4 id="textAni">Michael Küchenmeister</h4>
                 <script type="text/javascript" src="fadingText.js"></script>
             </div>
             <ul id="action-bar">
@@ -30,24 +30,24 @@
             $( document ).ready( function() {
                 var entries = [ 
                     { label: 'C', url: 'https://de.wikipedia.org/wiki/C_(Programmiersprache)', target: '_top' },
-                    { label: 'Java', url: 'http://www.flashforum.de/', target: '_top' },
-                    { label: 'JavaScript', url: 'http://www.jqueryscript.net/', target: '_top' },
-                    { label: 'HTML', url: 'http://forum.jswelt.de/', target: '_top' },
-                    { label: 'CSS', url: 'https://jsfiddle.net/user/NiklasKnaack/fiddles/', target: '_top' },
-                    { label: 'x64 Assembler', url: 'http://codepen.io/', target: '_top' },
-                    { label: 'SWI-Prolog', url: 'http://threejs.org/', target: '_top' },
-                    { label: 'SQL', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'Linux-Bash', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'Linux', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'Windows', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'MacOS', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'Android', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'PHP', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'Angular', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'Python', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'Apache2', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'MySQL', url: 'http://webglstudio.org/', target: '_top' },
-                    { label: 'Git', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Java', url: 'https://de.wikipedia.org/wiki/Java-Technologie', target: '_top' },
+                    { label: 'JavaScript', url: 'https://de.wikipedia.org/wiki/JavaScript', target: '_top' },
+                    { label: 'HTML', url: 'https://de.wikipedia.org/wiki/Hypertext_Markup_Language', target: '_top' },
+                    { label: 'CSS', url: 'https://de.wikipedia.org/wiki/Cascading_Style_Sheets', target: '_top' },
+                    { label: 'x64 Assembler', url: 'https://de.wikipedia.org/wiki/Assemblersprache', target: '_top' },
+                    { label: 'SWI-Prolog', url: 'https://de.wikipedia.org/wiki/Prolog_(Programmiersprache)', target: '_top' },
+                    { label: 'SQL', url: 'https://de.wikipedia.org/wiki/SQL', target: '_top' },
+                    { label: 'Linux-Bash', url: 'https://de.wikipedia.org/wiki/Bash_(Shell)', target: '_top' },
+                    { label: 'Linux', url: 'https://de.wikipedia.org/wiki/Linux', target: '_top' },
+                    { label: 'Windows', url: 'https://de.wikipedia.org/wiki/Microsoft_Windows', target: '_top' },
+                    { label: 'Mac-OS', url: 'https://de.wikipedia.org/wiki/MacOS', target: '_top' },
+                    { label: 'Android', url: 'https://de.wikipedia.org/wiki/Android_(Betriebssystem)', target: '_top' },
+                    { label: 'PHP', url: 'https://de.wikipedia.org/wiki/PHP', target: '_top' },
+                    { label: 'Angular', url: 'https://de.wikipedia.org/wiki/Angular', target: '_top' },
+                    { label: 'Python', url: 'https://de.wikipedia.org/wiki/Python_(Programmiersprache)', target: '_top' },
+                    { label: 'Apache2', url: 'https://de.wikipedia.org/wiki/Apache_HTTP_Server', target: '_top' },
+                    { label: 'MySQL', url: 'https://de.wikipedia.org/wiki/MySQL', target: '_top' },
+                    { label: 'Git', url: 'https://de.wikipedia.org/wiki/Git', target: '_top' },
                 ];
                 var settings = {
                     entries: entries,
@@ -64,7 +64,7 @@
                     speed: 0.2,
                     fontFamily: 'Oswald, Arial, sans-serif',
                     fontSize: '30',
-                    fontColor: '#A5C96F',
+                    fontColor: '#B0FB6F',
                     fontWeight: 'normal',//bold
                     fontStyle: 'normal',//italic 
                     fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
