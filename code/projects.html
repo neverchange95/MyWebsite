@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="Author" content="Michael Küchenmeister"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"/>
+        <title>Meine Projekte</title>
+    </head>
+    <body class="body_projects">
+        <nav id="projects_nav">
+            <div class="name_logo">
+                <h4>Michael Küchenmeister</h4>
+            </div>
+            <ul id="action-bar">
+                <li id="action-bar"><a href="main.html" id="action-bar">Start</a></li>
+                <li id="action-bar"><a href="over_me.html" id="action-bar">Über mich</a></li>
+                <li id="action-bar"><a href="projects.html" id="action-bar">Projekte</a></li>
+            </ul>
+        </nav>
+        <h1 class="h1_projects">Meine Projekte</h1>
+        <div class="process-wrapper">
+            <div id="progress-bar-container">
+                <ul>
+                    <li class="step step01 active">
+                        <div class="step-inner">HOME WORK</div>
+                    </li>
+                    <li class="step step02">
+                        <div class="step-inner">RESPONSIVE PART</div>
+                    </li>
+                    <li class="step step03">
+                        <div class="step-inner">CREATIVE CREATIONS</div>
+                    </li>
+                    <li class="step step04">
+                        <div class="step-inner">TESTIMONIALS PART</div>
+                    </li>
+                    <li class="step step05">
+                        <div class="step-inner">OUR LOCATIONS</div>
+                    </li>
+                </ul>
+                <div id="line">
+                    <div id="line-process"></div>
+                </div>
+            </div>
+            <div id="progress-content-section">
+                <div class="section-content discovery active">
+                    <img src="/images/todolist-app_icon.png" width="90" height="90">
+                    <h2>To-Do Applikation für Android Smartphones</h2>
+                    <p>
+                        Eine Applikation für Android Smartphones, welche in der Programmiersprache Java erstellt wurde. Als Entwicklungsumgebung 
+                        diente hierbei Android Studio. Die App verwaltet alle Todo´s, die vom Benutzer eingetragen wurden und speichert diese in eine
+                        SQL-Datenbank auf meinen Homeserver ab. Dieser läuft auf einen Raspberry Pi 4. 
+                        Der Sourcecode und eine genauere Beschreibung ist auf meinem Github Profil zu finden:</br>
+                        https://github.com/neverchange95/ToDoApp
+                    </p>
+                </div>
+
+                <div class="section-content strategy">
+                    <h2>GALLERY SECTION</h2>
+                    <p>
+                        dslkaäfölkdsölakfäöldskaäfölkdsöälakfäöldskaäfölkdsäölakf
+                        ölksaädfölkdsölakfäöldskaäfölkdsäöalfkädöslakfäöldskäaflk
+                        ölkjsdaälfkädslkafäölkdsaäöflkdsäölkafälkdsfölkdsaäölkfäs
+                    </p>
+                </div>
+
+                <div class="section-content creative">
+                    <h2>CREATIVE CREATIONS</h2>
+                    <p>
+                        dslkaäfölkdsölakfäöldskaäfölkdsöälakfäöldskaäfölkdsäölakf
+                        ölksaädfölkdsölakfäöldskaäfölkdsäöalfkädöslakfäöldskäaflk
+                        ölkjsdaälfkädslkafäölkdsaäöflkdsäölkafälkdsfölkdsaäölkfäs
+                    </p>
+                </div>
+
+                <div class="section-content production">
+                    <h2>´TESTMONIALS NOW</h2>
+                    <p>
+                        dslkaäfölkdsölakfäöldskaäfölkdsöälakfäöldskaäfölkdsäölakf
+                        ölksaädfölkdsölakfäöldskaäfölkdsäöalfkädöslakfäöldskäaflk
+                        ölkjsdaälfkädslkafäölkdsaäöflkdsäölkafälkdsfölkdsaäölkfäs
+                    </p>
+                </div>
+
+                <div class="section-content analysis">
+                    <h2>OUR LOCATIONS</h2>
+                    <p>
+                        dslkaäfölkdsölakfäöldskaäfölkdsöälakfäöldskaäfölkdsäölakf
+                        ölksaädfölkdsölakfäöldskaäfölkdsäöalfkädöslakfäöldskäaflk
+                        ölkjsdaälfkädslkafäölkdsaäöflkdsäölkafälkdsfölkdsaäölkfäs
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script>           
+                $(".step").click( function() {
+                $(this).addClass("active").prevAll().addClass("active");
+                $(this).nextAll().removeClass("active");
+            });
+
+            $(".step01").click( function() {
+                $("#line-process").css("width", "5%");
+                $(".discovery").addClass("active").siblings().removeClass("active");
+            });
+
+            $(".step02").click( function() {
+                $("#line-process").css("width", "25%");
+                $(".strategy").addClass("active").siblings().removeClass("active");
+            });
+
+            $(".step03").click( function() {
+                $("#line-process").css("width", "50%");
+                $(".creative").addClass("active").siblings().removeClass("active");
+            });
+
+            $(".step04").click( function() {
+                $("#line-process").css("width", "75%");
+                $(".production").addClass("active").siblings().removeClass("active");
+            });
+
+            $(".step05").click( function() {
+                $("#line-process").css("width", "95%");
+                $(".analysis").addClass("active").siblings().removeClass("active");
+            });
+        </script>
+    </body>
+</html>

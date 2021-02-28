@@ -12,53 +12,78 @@
     </head>
     <body class="body_main">
         <h1 class="h1_main">Hey, ich bin Michi<br>Informatik Student an der<br>Technischen Hochschule Ingolstadt</h1>
-        <nav>
+        <nav id="main_nav">
             <div class="name_logo">
                 <h4>Michael Küchenmeister</h4>
             </div>
-            <ul>
-                <li><a href="#">Start</a></li>
-                <li><a href="#">Über mich</a></li>
-                <li><a href="#">Projekte</a></li>
+            <ul id="action-bar">
+                <li id="action-bar"><a href="main.html" id="action-bar">Start</a></li>
+                <li id="action-bar"><a href="over_me.html" id="action-bar">Über mich</a></li>
+                <li id="action-bar"><a href="projects.html" id="action-bar">Projekte</a></li>
             </ul>
         </nav>
         <!-- Text rotation -->
-        <div id="tag"></div>
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="rotate_text.js"></script>
+        <script src="jquery.svg3dtagcloud.min.js"></script>
         <script>
-            $(document).ready(function() {
-                var elements = [
-                    {label : 'C'},
-                    {label : 'HTML'},
-                    {label : 'CSS'},
-                    {label : 'Java'},
-                    {label : 'PHP'},
-                    {label : 'Python'}
+            $( document ).ready( function() {
+                var entries = [ 
+                    { label: 'C', url: 'https://de.wikipedia.org/wiki/C_(Programmiersprache)', target: '_top' },
+                    { label: 'Java', url: 'http://www.flashforum.de/', target: '_top' },
+                    { label: 'JavaScript', url: 'http://www.jqueryscript.net/', target: '_top' },
+                    { label: 'HTML-5', url: 'http://forum.jswelt.de/', target: '_top' },
+                    { label: 'CSS', url: 'https://jsfiddle.net/user/NiklasKnaack/fiddles/', target: '_top' },
+                    { label: 'x64 Assembler', url: 'http://codepen.io/', target: '_top' },
+                    { label: 'SWI-Prolog', url: 'http://threejs.org/', target: '_top' },
+                    { label: 'SQL', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Linux-Bash', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Linux', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Windows', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'MacOS', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Android', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'PHP', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Angular', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Python', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Apache2', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'MySQL', url: 'http://webglstudio.org/', target: '_top' },
+                    { label: 'Git', url: 'http://webglstudio.org/', target: '_top' },
                 ];
                 var settings = {
-                    entries : entries,
-                    width : 640,
-                    height : 480,
-                    radius : '65%',
-                    radiusMin : 75,
-                    bgDraw : true,
-                    bgColor : '#000',
-                    opacityOver : 1.00,
-                    opacityOut : 0.05,
-                    opacitySpeed : 6,
-                    fov : 800,
-                    speed : 2,
-                    fontFamily: 'Corier, Arial, sans-serif',
+                    entries: entries,
+                    width: 750,
+                    height: 750,
+                    radius: '65%',
+                    radiusMin: 75,
+                    bgDraw: true,
+                    bgColor: '#172118',
+                    opacityOver: 1.00,
+                    opacityOut: 0.05,
+                    opacitySpeed: 6,
+                    fov: 800,
+                    speed: 0.2,
+                    fontFamily: 'Oswald, Arial, sans-serif',
                     fontSize: '30',
-                    fontColor: '#f00',
-                    fontWeight: 'bold',
-                    fontStyle: 'normal',
-                    fontSretch: 'normal',
-                    fontToUpparcase:true
+                    fontColor: '#A5C96F',
+                    fontWeight: 'normal',//bold
+                    fontStyle: 'normal',//italic 
+                    fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                    fontToUpperCase: true,
+                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                    tooltipFontSize: '11',
+                    tooltipFontColor: '#fff',
+                    tooltipFontWeight: 'normal',//bold
+                    tooltipFontStyle: 'normal',//italic 
+                    tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                    tooltipFontToUpperCase: false,
+                    tooltipTextAnchor: 'left',
+                    tooltipDiffX: 0,
+                    tooltipDiffY: 10
                 };
-                $('#tag').svg3DTagCloud(settings);
-            });
+    
+                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                $( '#holder' ).svg3DTagCloud( settings );
+            } );
         </script>
+        <div id="holder"></div>
     </body>
 </html>
