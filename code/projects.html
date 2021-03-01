@@ -27,16 +27,16 @@
             <div id="progress-bar-container">
                 <ul>
                     <li class="step step01 active">
-                        <div class="step-inner">Snake</div>
-                    </li>
-                    <li class="step step02">
                         <div class="step-inner">MP3-Player</div>
-                    </li>
-                    <li class="step step03">
+                    </li> 
+                    <li class="step step02">
                         <div class="step-inner">Rootkit</div>
                     </li>
-                    <li class="step step04">
+                    <li class="step step03">
                         <div class="step-inner">ToDo-App</div>
+                    </li>
+                    <li class="step step04">
+                        <div class="step-inner">Website</div>
                     </li>
                     <li class="step step05">
                         <div class="step-inner">Visuelle Suche</div>
@@ -48,32 +48,31 @@
             </div>
             <div id="progress-content-section">
                 <div class="section-content snake active">
-                    <img src="/images/snake.png" width="90" height="90">
-                    <h2>Nachbau von Snake in C</h2>
-                    <p>
-                        Beschreibung für Snake
-                    </p>
-                </div>
-
-                <div class="section-content mp3-player">
                     <img src="/images/mp3-icon.png" width="90" height="90">
                     <h2>MP3-Player in Java</h2>
                     <p>
-                        Beschreibung für den MP3-Player
+                        Meine erste praktische Erfahrung einen Sourcecode eigenständig zu entwickeln wurde mir im Modul Grundlagen der Programmierung 2
+                        an meiner Hochschule vermittelt. Zum erfolgreichen bestehen des Moduls musste neben der Prüfung eine praktische Aufgabe erledigt werden,
+                        welche darin bestand einen MP3-Player mithilfe von einigen Tipps in der Programmiersprache Java zu entwerfen. Die Gesamtaufgabe wurde in 
+                        einzelne Teilaufgaben zerlegt, welche jeweils binnen einer Woche abgegeben werden mussten. Der jeweils implementierte Code konnte mit JUnit Tests
+                        auf die erforderliche Funktionalität vor der Abgabe getestet werden. Das Programm ermöglicht es dem Benutzer eine Playlist mit seinen gewünschten Songs zu erstellen
+                        und diese mithilfe des Players abzuspielen.
                     </p>
-                    <img src="/images/screen_mediaplayer.JPG" >
-
                 </div>
-
-                <div class="section-content rootkit">
+                <div class="section-content mp3-player">
                     <img src="/images/rootkit.png" width="90" height="90">
                     <h2>Rootkit & Keylogger</h2>
                     <p>
-                        Beschreibung für das Rootkit
+                        Im Rahmen einer Seminararbeit im Bereich IT-Security entwickelte ich ein Kernel-Mode-Rootkit für den Linux Kernel sowie einen Keylogger, welcher das Schadprogamm darstellen sollte.
+                        Das Rootkit wurde für den Linux Kernel 4.10.0-38-generic entwickelt und hat die Aufgabe bestimmte Prozess Identifier vor dem Linux Programm "ps", welches alle aktuell laufenden Prozesse auflistet zu verbergen.
+                        Um dies zu erreichen wurde die Adresse der Funktion, welche die einzelnen Verzeichniseinträge (also die laufenden Prozesse) an das Programm "ps" liefert in der System-Call-Table durch die Adresse des Rootkits 
+                        ersetzt. Das Rootkit übernimmt dann im Prinzip die gleiche Aufgabe wie die ursprüngliche Funktion, gibt aber den oder die Verzeichniseinträge, die verborgen werden sollen nicht mit zurück. Dadurch wird erreicht,
+                        dass dem Benutzer einzelne laufende Prozesse nicht mehr angezeigt werden und sie somit unsichtbar sind. Der zusätzlich entwickelte Keylogger diente als eigentliches Schadprogramm, welcher mithilfe des 
+                        Rootkits dann vor dem Anwender verborgen wurde. Die Aufgabe des Keyloggers war es, wie der Name schon sagt, alle vom Benutzer eingetippten Tastatureingaben in eine Datei mitzuschreiben.
                     </p>
                 </div>
 
-                <div class="section-content todo">
+                <div class="section-content rootkit">
                     <img src="/images/todolist-app_icon.png" width="90" height="90">
                     <h2>To-Dp Applikation für Android Smartphones</h2>
                     <p>
@@ -82,6 +81,17 @@
                         SQL-Datenbank auf meinen Homeserver ab. Dieser läuft auf einen Raspberry Pi 4. 
                         Der Sourcecode und eine genauere Beschreibung ist auf meinem Github Profil zu finden:</br>
                         https://github.com/neverchange95/ToDoApp
+                    </p>
+                </div>
+
+                <div class="section-content todo">
+                    <img src="/images/netz.png" width="90" height="90">
+                    <h2>Eingene Website über mich</h2>
+                    <p>
+                        Ein weiteres kleines privates Projekt war es diese Website zu erstellen. Für die Designentwicklung an sich nutzte ich Adobe Xd und realisierte das Design mit HTML und CSS.
+                        JavaScript nimmt nur einen kleinen Anteil ein und diente jediglich zur Realisierung der Animation der Schrift auf der Willkommen Seite, sowie der Animation meines Namens
+                        in der Nav-bar. Die Website liegt auf einem Apache2 Webserver, der bei mir Zuhause auf einem Raspberry Pi-4 läuft.
+                        Die Website soll einen kleinen Überblick über mein Berufliches Leben verschaffen, sowie meine Programmiererfahrungen ein wenig wiederspiegeln.
                     </p>
                 </div>
 
