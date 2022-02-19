@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* For fading text */
+span#green {
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateX(50px);
+    display: inline-block;
+}
+
+span.fade#green {
+    opacity: 1;
+    transform: translateX(0px);
+    color: rgb(24, 136, 102);
+}
+
+span#white {
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateX(50px);
+    display: inline-block;
+}
+
+span.fade#white {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/*------------------------------------------- main.html ------------------------------------------*/
+.h1_main {
+    font-family:"Montserrat", sans-serif;
+    font-size: 2.5vw;
+    color: white;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.body_main {
+    background: #172118;
+}
+
+.nav-head a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+  
+.nav-head {
+    padding: 0 20px;
+    background-color: #1d1f1d;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    font-family: 'Roboto', sans-serif;
+}
+  
+#brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+  
+#brand a {
+    color:rgb(24, 136, 102);
+}
+
+.navbar-list {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 70px
+}
+  
+.navbar-list a {
+    color: black;
+}
+
+.navbar-list li {
+    padding: 5px;
+    margin-left: 50px;
+}
+
+.navbar-list li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+  
+.open .bar2 {
+    opacity: 0;
+}
+  
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 210px;
+    width: 100%;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.mobile-menu li {
+    margin-top: 30px;
+}
+
+.mobile-menu a {
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 724px) {
+    .nav-head nav {
+        display: none;
+    }
+  
+    #hamburger-icon {
+        display: block;
+    }
+}
+
+
+/* rotaiting text */
+div#holder {
+    position: absolute;
+    left: 58vw;
+    top: 10vw;
+}
+
+@media screen and (max-width: 1420px){
+    div#holder { 
+        position: absolute;
+        left: 55vw;
+        top: 10vw;
+    } 
+}
+
+@media screen and (max-width: 1310px){
+    div#holder { 
+        position: absolute;
+        left: 52vw;
+        top: 10vw;
+    } 
+}
+
+@media screen and (max-width: 1024px) {
+    .h1_main {
+        font-family:"Montserrat", sans-serif;
+        font-size: 3.0vw;
+        color: white;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    div#holder { 
+        position: absolute;
+        top: 61%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
+}
+
+@media screen and (max-width: 800px) {
+    .h1_main {
+        font-family:"Montserrat", sans-serif;
+        font-size: 4.5vw;
+        color: white;
+        text-align: center;
+        margin-top: 10%;
+    }
+
+    div#holder { 
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
+}
+
+.rotate_inactive {
+    display: none;
+}
+/*---------------------------------------- main.html end ---------------------------------------*/

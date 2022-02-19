@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------------------------------- projects.html ---------------------------------------*/
+.body_projects {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #172118;
+}
+
+.nav-head a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+  
+.nav-head {
+    padding: 0 20px;
+    background-color: #1d1f1d;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    font-family: 'Roboto', sans-serif;
+}
+  
+#brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+  
+#brand a {
+    color:rgb(24, 136, 102);
+}
+
+.navbar-list {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 70px
+}
+  
+.navbar-list a {
+    color: black;
+}
+
+.navbar-list li {
+    padding: 5px;
+    margin-left: 50px;
+}
+
+.navbar-list li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+  
+.open .bar2 {
+    opacity: 0;
+}
+  
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    height: 210px;
+    width: 100%;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.mobile-menu li {
+    margin-top: 30px;
+}
+
+.mobile-menu a {
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 724px) {
+    .nav-head nav {
+        display: none;
+    }
+  
+    #hamburger-icon {
+        display: block;
+    }
+}
+
+.h1_projects {
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 40px; /* abstand überschrift zu nav-bar */
+    margin-bottom: -100px; /* abstand projekte zu überschrift */
+}
+
+nav#projects_nav {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    display: flex;
+    align-items: center;
+    min-height: 6vh;
+}
+
+.process-wrapper {
+    margin: auto;
+    max-width: 1080px;
+}
+
+#progress-bar-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 100px;
+    margin-top: 180px; /* bar nach unten/oben verschieben */
+}
+
+#progress-bar-container ul {
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+}
+
+/* Kreis */
+#progress-bar-container li:before{
+    content: '';
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 3px white;
+    transition: all ease 0.3s;
+}
+
+/* Kreis inhalt */
+#progress-bar-container li.active:before,
+#progress-bar-container li:hover:before {
+    background: #B0FB6F;
+}
+
+#progress-bar-container li {
+    list-style: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    vertical-align: bottom;
+    height: 70px; /* Abstand schrift zu kreis */
+    position: relative;
+}
+
+#progress-bar-container li .step-inner {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 18px;
+}
+
+#progress-bar-container li.active,
+#progress-bar-container li:hover {
+    color: #B0FB6F;
+}
+
+/* Unterer Kreis */
+#progress-bar-container li:after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #777;
+    margin: auto;
+    border: solid 5px white;
+    border-radius: 50%;
+    margin-top: 49px;
+    box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+    transition: all ease 0.2s;
+}
+
+#progress-bar-container li:hover:after {
+    background: #B0FB6F;
+}
+
+#progress-bar-container li.active:after {
+    background: #B0FB6F;
+}
+
+/* Linie */
+#progress-bar-container #line {
+    width: 90%;
+    margin: auto;
+    background: #eee;
+    height: 5px;
+    position: absolute;
+    left: 5%;
+    top: 65px;
+    z-index: 1;
+    border-radius: 50px;
+    transition: all ease 0.9s;
+}
+
+/* Fortschritt linie */
+#progress-bar-container #line-process {
+    content: '';
+    width: 5%;
+    height: 100%;
+    background: #B0FB6F;
+    background: linear-gradient(to right, #B0FB6F 0%, #B0FB6F 100%);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50px;
+    transition: all ease 0.9s;
+}
+
+#progress-content-section {
+    width: 100%;
+    margin: auto;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    border-radius: 4px;
+}
+
+#progress-content-section .section-content {
+    padding: 30px 40px;
+    text-align: center;
+}
+
+#progress-content-section .section-content h2 {
+	font-size:25px;
+	text-transform:uppercase;
+	color:#333;
+	letter-spacing:1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#progress-content-section .section-content p {
+	font-size:18px;
+	line-height:1.8em;
+	color:#777;
+}
+
+#progress-content-section .section-content {
+	display:none;
+	animation: FadeInUp 700ms ease 1; 
+	animation-fill-mode:forwards; 
+	transform:translateY(15px);
+	opacity:0;
+}
+
+#progress-content-section .section-content.active {
+	display:block;
+}
+
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+}
+
+@media only screen and (max-width: 724px) {
+    #progress-bar-container li .step-inner {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    #progress-bar-container li .step-inner {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    #progress-bar-container li .step-inner {
+        font-size: 12px;
+    }
+
+    .h1_projects {
+        color: white;
+        text-align: center;
+        font-size: 35px;
+        margin-top: 80px; /* abstand überschrift zu nav-bar */
+        margin-bottom: -100px; /* abstand projekte zu überschrift */
+    }
+}
+/*------------------------------------- projects.html end -------------------------------------*/
+

@@ -7,21 +7,32 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style_projects.css"/>
+        <link rel="icon" href="/images/coding.png"/> 
         <title>Meine Projekte</title>
     </head>
     <body class="body_projects">
-        <nav id="projects_nav">
-            <div class="name_logo">
-                <h4 id="textAni">Michael Küchenmeister</h4>
-                <script type="text/javascript" src="fadingText.js"></script>
+        <header class="nav-head">
+            <div id="brand"><a href="main.html">Michael Küchenmeister</a></div>
+            <nav>
+                <ul class="navbar-list">
+                    <li><a href="main.html">Start</a></li>
+                    <li><a href="over_me.html">Über mich</a></li>
+                    <li><a href="projects.html">Projekte</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="navbar-list mobile-menu">
+                    <li><a href="main.html">Start</a></li>
+                    <li><a href="over_me.html">Über mich</a></li>
+                    <li><a href="projects.html">Projekte</a></li>
+                </ul>
             </div>
-            <ul id="action-bar">
-                <li id="action-bar"><a href="main.html" id="action-bar">Start</a></li>
-                <li id="action-bar"><a href="over_me.html" id="action-bar">Über mich</a></li>
-                <li id="action-bar"><a href="projects.html" id="action-bar">Projekte</a></li>
-            </ul>
-        </nav>
+        </header>
+        <script src="nav_projects.js"></script>>
         <h1 class="h1_projects" id="welcome_h1">Meine Projekte</h1>
         <div class="process-wrapper">
             <div id="progress-bar-container">
@@ -76,7 +87,7 @@
 
                 <div class="section-content rootkit">
                     <img src="/images/todolist-app_icon.png" width="90" height="90">
-                    <h2>To-Dp Applikation für Android Smartphones</h2>
+                    <h2>To-Do Applikation für Android Smartphones</h2>
                     <p>
                         Eine Applikation für Android Smartphones, welche in der Programmiersprache Java erstellt wurde. Als Entwicklungsumgebung 
                         diente hierbei Android Studio. Die App verwaltet alle Todo´s, die vom Benutzer eingetragen wurden und speichert diese in eine
@@ -91,8 +102,8 @@
                     <h2>Eingene Website über mich</h2>
                     <p>
                         Ein weiteres kleines privates Projekt war es diese Website zu erstellen. Für die Designentwicklung an sich nutzte ich Adobe Xd und realisierte das Design mit HTML und CSS.
-                        JavaScript nimmt nur einen kleinen Anteil ein und diente jediglich zur Realisierung der Animation der Schrift auf der Willkommen Seite, sowie der Animation meines Namens
-                        in der Nav-bar. Die Website liegt auf einem Apache2 Webserver, der bei mir Zuhause auf einem Raspberry Pi-4 läuft und verfügt über ein Let´s Encrypt SSL-Zertifikat.
+                        JavaScript nimmt nur einen kleinen Anteil ein und diente lediglich zur Realisierung der Animationen auf dieser Website. 
+                        Die Website liegt auf einem Apache2 Webserver, der bei mir Zuhause auf einem Raspberry Pi-4 läuft und verfügt über ein Let´s Encrypt SSL-Zertifikat.
                         Die Website soll einen kleinen Überblick über mein Berufliches Leben verschaffen, sowie meine Programmiererfahrungen ein wenig wiederspiegeln.
                         Der Sourcecode ist auf meinen Github Profil zu finden:<br>
                         <a href="https://github.com/neverchange95/MyWebsite" target="_blank"><img src="/images/GitHub_Logo.png" width="70" height="30"></a>
@@ -115,7 +126,7 @@
                 </div>
             </div>
         </div>
-        <br><br><br>
+	<br><br><br>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script>           

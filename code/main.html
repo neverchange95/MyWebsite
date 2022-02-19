@@ -7,22 +7,33 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style_main.css"/>
+        <link rel="icon" href="/images/coding.png"/> 
         <title>Michael Küchenmeister</title>
     </head>
     <body class="body_main">
-        <h1 class="h1_main" id="main_text">Hey, ich bin Michi<br>Informatik Student an der<br>Technischen Hochschule Ingolstadt</h1>
-        <nav id="main_nav">
-            <div class="name_logo">
-                <h4 id="textAni">Michael Küchenmeister</h4>
-                <script type="text/javascript" src="fadingText.js"></script>
+        <header class="nav-head">
+            <div id="brand"><a href="main.html">Michael Küchenmeister</a></div>
+            <nav>
+                <ul class="navbar-list">
+                    <li><a href="main.html">Start</a></li>
+                    <li><a href="over_me.html">Über mich</a></li>
+                    <li><a href="projects.html">Projekte</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="navbar-list mobile-menu">
+                    <li><a href="main.html">Start</a></li>
+                    <li><a href="over_me.html">Über mich</a></li>
+                    <li><a href="projects.html">Projekte</a></li>
+                </ul>
             </div>
-            <ul id="action-bar">
-                <li id="action-bar"><a href="main.html" id="action-bar">Start</a></li>
-                <li id="action-bar"><a href="over_me.html" id="action-bar">Über mich</a></li>
-                <li id="action-bar"><a href="projects.html" id="action-bar">Projekte</a></li>
-            </ul>
-        </nav>
+        </header>
+        <script src="nav_main.js"></script>
+        <h1 class="h1_main" id="main_text">Hey, ich bin Michi<br>Informatik Student an der<br>Technischen Hochschule Ingolstadt</h1>
         <!-- Text rotation -->
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="jquery.svg3dtagcloud.min.js"></script>
@@ -49,6 +60,9 @@
                     { label: 'MySQL', url: 'https://de.wikipedia.org/wiki/MySQL', target: '_blank' },
                     { label: 'Git', url: 'https://de.wikipedia.org/wiki/Git', target: '_blank' },
                 ];
+
+                var width = $(window).width();
+
                 var settings = {
                     entries: entries,
                     width: 750,
@@ -80,11 +94,47 @@
                     tooltipDiffX: 0,
                     tooltipDiffY: 10
                 };
+                
+                if(width < 1830) {
+                    settings.width = 700;
+                    settings.height = 700;
+                    settings.fontSize = '30';
+                }
+
+                if(width < 1700) {
+                    settings.width = 600;
+                    settings.height = 600;
+                    settings.fontSize = '25';
+                }
+
+                if(width < 1310) {
+                    settings.width = 550;
+                    settings.height = 550;
+                    settings.fontSize = '20';
+                }
+
+                if(width < 1155) {
+                    settings.width = 490;
+                    settings.height = 490;
+                    settings.fontSize = '20';
+                }
+
+                if(width < 800) {
+                    settings.width = 450;
+                    settings.height = 450;
+                    settings.fontSize = '18';
+                } 
+
+                if(width < 400) {
+                    settings.width = 400;
+                    settings.height = 400;
+                    settings.fontSize = '15';
+                } 
     
                 //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
                 $( '#holder' ).svg3DTagCloud( settings );
             } );
         </script>
-        <div id="holder"></div>
+        <div id="holder" class="rotate"></div>
     </body>
 </html>

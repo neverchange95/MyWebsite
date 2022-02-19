@@ -7,24 +7,34 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,700&family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style_overme.css"/>
+        <link rel="icon" href="/images/coding.png"/> 
         <title>Über mich</title>
     </head>
     <body class="body_over_me">
-        <nav id="over_me_nav">
-            <div class="name_logo">
-                <h4 id="textAni">Michael Küchenmeister</h4>
-                <script type="text/javascript" src="fadingText.js"></script>
+        <header class="nav-head">
+            <div id="brand"><a href="main.html">Michael Küchenmeister</a></div>
+            <nav>
+                <ul class="navbar-list">
+                    <li><a href="main.html">Start</a></li>
+                    <li><a href="over_me.html">Über mich</a></li>
+                    <li><a href="projects.html">Projekte</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="navbar-list mobile-menu">
+                    <li><a href="main.html">Start</a></li>
+                    <li><a href="over_me.html">Über mich</a></li>
+                    <li><a href="projects.html">Projekte</a></li>
+                </ul>
             </div>
-            <ul id="action-bar">
-                <li id="action-bar"><a href="main.html" id="action-bar">Start</a></li>
-                <li id="action-bar"><a href="over_me.html" id="action-bar">Über mich</a></li>
-                <li id="action-bar"><a href="projects.html" id="action-bar">Projekte</a></li>
-            </ul>
-        </nav>
-        <h1 class="h1_timeline">Michael Küchenmeister</h1>
-        <script type="text/javascript" src="welcome_animation.js"></script>
+        </header>
+        <script src="nav_normal.js"></script>
 
+        <h1 class="h1_timeline" id="header-timeline">Michael Küchenmeister</h1>
         <div class="timeline">
             <ul>
                 <li>
@@ -47,11 +57,11 @@
                 </li>
                 <li>
                     <div class="content">
-                        <h3>Fachhochschulreife</h3>
+                        <h3>Hochschulreife</h3>
                         <p>Im Bereich Wirtschaft & Verwaltung<br>an der Berufsoberschule Ingolstadt<br>von September 2016</p>
                     </div>
                     <div class="time">
-                        <h4>Bis Mai. 2018</h4>
+                        <h4>Bis Jul. 2018</h4>
                     </div>
                 </li>
                 <li>
@@ -69,7 +79,7 @@
                         <p>Bei Evang.-Luth KGA Ingolstadt<br>von Juli 2016</p>
                     </div>
                     <div class="time">
-                        <h4>Bis Sep. 2016</h4>
+                        <h4>Bis Aug. 2016</h4>
                     </div>
                 </li>
                 <li>
